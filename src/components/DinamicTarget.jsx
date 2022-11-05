@@ -12,12 +12,12 @@ const DinamicTarget = ({ resident }) => {
 
   return (
     <div className="targetCharacter">
-      <img src={character.image} alt="" />
+      <img src={character?.image} alt="" />
       <div>
-        <h2>{character.name}</h2>
-        <h3>{character.status}</h3>
-        <h3>{character.origin.name}</h3>
-        <p>Episodes where appear {character.episode.length}</p>
+        <h2>{character?.name}</h2>
+        <h3>{character?.status}</h3>
+        <h3>{character?.origin?.name}</h3>
+        <p>Episodes where appear {character?.episode?.length}</p>
       </div>
     </div>
   );
