@@ -14,7 +14,9 @@ h1{
 .card{
   display: grid;
   place-items: center;
-  gap: 2rem;
+  
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .descripcion{
@@ -45,4 +47,8 @@ h1{
   height: 400px;
   background-color: rgb(14, 14, 14);
   border-radius: 3rem;
+}
+.imagen{
+
+  width: 1500px;
 }

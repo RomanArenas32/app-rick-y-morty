@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import DinamicTarget from "./components/DinamicTarget";
+import Header from "./components/Header";
 
 function App() {
   const [location, setLocation] = useState({});
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <div className="card">
+      <Header />
         <section className="descripcion">
           <h1>{location?.name}</h1>
           <div className="descripcion_location">
