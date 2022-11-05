@@ -44,11 +44,18 @@ h1{
   align-items: center;
   gap: 3rem;
   width: 600px;
-  height: 400px;
+  height: 350px;
   background-color: rgb(14, 14, 14);
   border-radius: 3rem;
 }
 .imagen{
 
-  width: 1500px;
+ width: 2000px;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
 }

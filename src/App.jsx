@@ -26,7 +26,7 @@ function App() {
             <h3>Residents: {location?.residents?.length}</h3>
           </div>
         </section>
-        <div>
+        <div className="container">
           {location?.residents?.map(resident => (
             <DinamicTarget resident={resident} key={resident} />
           ))}
