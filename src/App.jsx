@@ -11,19 +11,21 @@ function App() {
       .then((res) => setLocation(res.data));
   }, []);
 
+
+  
   return (
     <>
       <div className="card">
         <section className="descripcion">
-          <h1>{location.name}</h1>
+          <h1>{location?.name}</h1>
           <div className="descripcion_location">
-            <h3>type: {location.type}</h3>
-            <h3>dimension: {location.dimension}</h3>
-            <h3>Residents: {location.residents.length}</h3>
+            <h3>type: {location?.type}</h3>
+            <h3>dimension: {location?.dimension}</h3>
+            <h3>Residents: {location?.residents?.length}</h3>
           </div>
         </section>
         <div>
-          {location.residents.map(resident => (
+          {location?.residents?.map(resident => (
             <DinamicTarget resident={resident} key={resident} />
           ))}
         </div>
