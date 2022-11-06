@@ -8,7 +8,6 @@ const DinamicTarget = ({ resident }) => {
     axios.get(resident).then((res) => setCharacter(res.data));
   }, []);
 
-  console.log(character);
 
   return (
     <div className="targetCharacter">
