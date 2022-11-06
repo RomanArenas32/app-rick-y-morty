@@ -15,34 +15,34 @@ function App() {
   }, []);
 
   const cambiaId = () => {
-    if(newValor > 126 || newValor < 0){
-      alert("Ingrese un numero valido de 1 a 126")
-    }else {
-       axios
-      .get(`https://rickandmortyapi.com/api/location/${newValor}`)
-      .then((res) => setLocation(res.data));
+    if (newValor > 126 || newValor < 0) {
+      alert("Ingrese un numero valido de 1 a 126");
+    } else {
+      axios
+        .get(`https://rickandmortyapi.com/api/location/${newValor}`)
+        .then((res) => setLocation(res.data));
     }
-   
   };
 
   return (
     <>
       <div className="card">
         <Header />
-        <div className="changeButton">
-          <input
-            type="text"
-            value={newValor}
-            onChange={(e) => setNewValor(Number(e.target.value))}
-          />
-          <button onClick={cambiaId}>Change</button>
-        </div>
+
         <section className="descripcion">
           <h1>{location?.name}</h1>
           <div className="descripcion_location">
             <h3>type: {location?.type}</h3>
             <h3>dimension: {location?.dimension}</h3>
             <h3>Residents: {location?.residents?.length}</h3>
+          </div>
+          <div className="changeButton">
+            <input
+              type="text"
+              value={newValor}
+              onChange={(e) => setNewValor(Number(e.target.value))}
+            />
+            <button onClick={cambiaId}>Change</button>
           </div>
         </section>
         <div className="container">
